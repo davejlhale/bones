@@ -1,30 +1,17 @@
 import './App.css';
-import BasicSlider from './components/BasicSlider/BasicSlider';
-
+import RegionPage from './components/Region/RegionPage';
 function App() {
 
-  const AC_FeedDogs ={
-    name:"Feed Dogs",
-    timeToComplete:10
+  const RegionActions = {
+    feed: { name: "Feed Dogs", timeToComplete: 10,unlocked:true },
+    vacinate: { name: "Vacinate", timeToComplete: 20,unlocked:true},
+    fleatTick: { name: "Treat Fleas", timeToComplete: 60,unlocked:true},
+    steralise: { name: "Steralise", timeToComplete: 30,unlocked:true}
   }
-  const AC_Vacinate ={
-    name:"Vacinate",
-    timeToComplete:20
-  }
-  const AC_Treat ={
-    name:"Treat",
-    timeToComplete:40
-  }
-  const AC_Steralise ={
-    name:"Steralise",
-    timeToComplete:60
-  }
+  
   return (
     <div className="App">
-            <BasicSlider ActionConfig={AC_FeedDogs}/>
-            <BasicSlider ActionConfig={AC_Vacinate}/>
-            <BasicSlider ActionConfig={AC_Steralise}/>
-            <BasicSlider ActionConfig={AC_Treat}/>
+      <RegionPage RegionActions={RegionActions} />
     </div>
   );
 }
