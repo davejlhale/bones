@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import BasicSlider from './components/BasicSlider/BasicSlider';
 
 function App() {
+
+  const AC_FeedDogs ={
+    name:"Feed Dogs",
+    timeToComplete:10
+  }
+  const AC_Vacinate ={
+    name:"Vacinate",
+    timeToComplete:20
+  }
+  const AC_Treat ={
+    name:"Treat",
+    timeToComplete:40
+  }
+  const AC_Steralise ={
+    name:"Steralise",
+    timeToComplete:60
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+            <BasicSlider ActionConfig={AC_FeedDogs}/>
+            <BasicSlider ActionConfig={AC_Vacinate}/>
+            <BasicSlider ActionConfig={AC_Steralise}/>
+            <BasicSlider ActionConfig={AC_Treat}/>
     </div>
   );
 }
