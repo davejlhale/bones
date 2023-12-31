@@ -73,7 +73,7 @@ const BasicSlider = ({ ActionConfig }) => {
 
         return () => { clearInterval(id); };
 
-    }, [running]);
+    }, [running,completeTime]);
 
 
 
