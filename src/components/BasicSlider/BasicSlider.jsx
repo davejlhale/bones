@@ -54,7 +54,7 @@ const BasicSlider = ({action} ) => {
                 <p>{action.name}</p>
                 <div className="barWrapper">
                     <div className="barContainer">
-                        <div className="bar" style={{ width: (timer / completeTime) * 100 + '%' }}>{timer}
+                        <div className="bar" style={{ width: (timer / completeTime) * 100 + '%' }}>
                         </div>
                     </div>
                 </div>
