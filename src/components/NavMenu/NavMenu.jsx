@@ -48,6 +48,10 @@ export default function NavMenu({ loggedInUser, recipe }) {
           setIsNavExpanded(false);
         }} to="/Staff" >Staff</NavLink>
 
+        <NavLink onClick={() => {
+          setIsNavExpanded(false);
+        }} to="/" >Profile</NavLink>
+
       </>
     )
   }

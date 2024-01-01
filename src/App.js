@@ -4,6 +4,7 @@ import RegionPage from './components/Region/RegionPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavMenu from "./components/NavMenu/NavMenu";
 import ComingSoon from './components/ComingSoon/ComingSoon';
+import Homepage from './components/Homepage/Homepage';
 
 function App() {
   //define some objects to group stuff such as actions/currencies etc
@@ -33,7 +34,9 @@ function App() {
       <BrowserRouter>
         <CurrencyBar Currencies={Currencies} />
         <NavMenu />
+        
         <Routes>
+        <Route path="/" element={<Homepage/>} />
           <Route
             path="/Regions"
             element={
