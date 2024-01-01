@@ -1,8 +1,5 @@
-import React from "react";
 import { Container, Value, CurrencyBox } from './CurrencyBar.styles'
-
-
-
+import Tooltip from "../Tooltip/Tooltip";
 
 const CurrencyBar = ({ Currencies }) => {
 
@@ -10,8 +7,10 @@ const CurrencyBar = ({ Currencies }) => {
         return (
             <CurrencyBox key={key}>
                  {/* logo component below in this file */}
+                 <Tooltip text={currency.altText} >
                 <Logo currency={currency} />
-                <Value>0</Value>
+                </Tooltip>
+                <Value>{currency.value}</Value>
             </CurrencyBox>
         );
     });

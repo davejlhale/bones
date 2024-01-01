@@ -48,4 +48,5 @@ export const Container = styled.div`
         background-image: linear-gradient(#23f016,#4cf041,#4cf041); 
         border-radius: 2px; 
     }
+
 `;
