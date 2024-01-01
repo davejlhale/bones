@@ -1,5 +1,7 @@
-import { Container, Value, CurrencyBox } from './CurrencyBar.styles'
+import { Container,  CurrencyBox } from './CurrencyBar.styles'
 import Tooltip from "../Tooltip/Tooltip";
+import Value from './Value';
+import Logo from './Logo';
 
 const CurrencyBar = ({ Currencies }) => {
 
@@ -10,8 +12,8 @@ const CurrencyBar = ({ Currencies }) => {
                  <Tooltip text={currency.altText} >
                 <Logo currency={currency} />
                 </Tooltip>
-                <Value>{currency.value}</Value>
-            </CurrencyBox>
+                <Value value={currency.value}></Value>
+            </CurrencyBox> 
         );
     });
 
@@ -19,29 +21,10 @@ const CurrencyBar = ({ Currencies }) => {
         <Container>
             {displayCurrencies}
         </Container>
+        
     )
 
 }
 
 export default CurrencyBar;
 
-//logo component used in currencyBar component above
-//left here to save messing about with css styles
-const Logo = ({ currency }) => {
-    const requireF = (modulePath) => { // force require
-        try {
-            return require(`../../assets/icons/${currency.icon}`);
-        }
-        catch (e) {
-            console.log('requireF(): The file "' + modulePath + '" could not be loaded.');
-            return "";
-        }
-    }
-    return (
-        <img
-            className="Logo"
-            src={requireF(currency.icon)} //needed to return empty src if module(IE FILE) fails tyo load
-            alt={currency.altText}
-        />
-    );
-};

@@ -24,7 +24,7 @@ export const CurrencyBox = styled.div`
     }
 `;
 
-export const Value = styled.div`
+export const CurrencyValue = styled.div`
 margin-left:10px;
 flex: 1 0 21%;
   
